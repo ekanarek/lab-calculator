@@ -83,6 +83,10 @@ function calculate(expression) {
     return sqrt(num1);
   }
   if (operator === '!') {
+    if (num1 < 1 || Number.isInteger(num1) === false) {
+      alert('Factorials can only be defined for positive integers. Try again!');
+      return;
+    }
     return factorial(num1);
   }
   alert('Unrecognized operator.');
